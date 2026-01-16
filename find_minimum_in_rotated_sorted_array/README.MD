@@ -1,4 +1,4 @@
-- https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+Problem: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
 
 Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:
 
@@ -26,3 +26,11 @@ Example 3:
 > Input: nums = [11,13,15,17]  
 > Output: 11  
 > Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
+
+---
+
+Concepts:
+
+- the property of rotated sorted array, given [3, 4, 0, 1, 2], is separatable into LHS(left hand side) and RHS, such as [[3, 4], [0, 1, 2]]
+- We can use Binary Search to get a number, if it is **larger than leftest number** and **smaller than rightest number**, then it's the location of final number in the original array.
+  - By getting it's location then we can know the rotate times.
